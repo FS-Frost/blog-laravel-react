@@ -26,8 +26,23 @@ class Home extends React.Component<HomeProps, HomeState> {
         this.setState({ initialCount: parseInt(event.target.value) });
     }
 
-    visitCount() {
-        Inertia.visit("");
+    visitCounter() {
+        Inertia.visit("counter", {
+            data: this.counterData,
+            onSuccess: () => {
+                console.log("visitCounter done.");
+            },
+        });
+    }
+
+    get counterData(): CounterProps {
+        return {
+            initialCount: this.state.initialCount,
+        };
+    }
+
+    get buttonText(): string {
+        return `I want to count from ${this.state.initialCount}!`;
     }
 
     render() {
@@ -35,29 +50,27 @@ class Home extends React.Component<HomeProps, HomeState> {
             <div>
                 <h1>Home component</h1>
 
-                {/* <button onClick={() => this.visitCount()}>
-                    I want to count!
-                </button> */}
-
                 <input
                     type="number"
                     value={this.state.initialCount}
                     onChange={this.handleInitialCounterChange}
                 />
 
-                <InertiaLink
-                    href="/counter"
-                    method="get"
-                    as="button"
-                    type="button"
-                    data={
-                        {
-                            initialCount: this.state.initialCount,
-                        } as CounterProps
-                    }
-                >
-                    I want to count from {this.state.initialCount}!
-                </InertiaLink>
+                <div>
+                    <InertiaLink
+                        href="/counter"
+                        method="get"
+                        as="button"
+                        type="button"
+                        data={this.counterData}
+                    >
+                        {this.buttonText}
+                    </InertiaLink>
+
+                    <button onClick={() => this.visitCounter()}>
+                        {this.buttonText} (Manually)
+                    </button>
+                </div>
             </div>
         );
     }
