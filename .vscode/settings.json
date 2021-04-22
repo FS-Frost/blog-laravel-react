@@ -1,0 +1,41 @@
+{
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "html.format.enable": true,
+    "prettier.enable": true,
+    "prettier.printWidth": 140,
+    "prettier.tabWidth": 4,
+    "typescript.format.enable": true,
+    "trailing-spaces.trimOnSave": true,
+    "trailing-spaces.highlightCurrentLine": false,
+    "trailing-spaces.deleteModifiedLinesOnly": true,
+    "blade.format.enable": true,
+    "intelephense.format.enable": true,
+    "intelephense.format.braces": "k&r",
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSaveMode": "file"
+    },
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSaveMode": "file"
+    },
+    "[jsonc]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSaveMode": "file"
+    },
+    "[php]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+        "editor.formatOnSaveMode": "file",
+        "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
+    },
+    "[blade]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "onecentlin.laravel-blade",
+        "editor.formatOnSaveMode": "file"
+    }
+}
