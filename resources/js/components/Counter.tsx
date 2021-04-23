@@ -1,4 +1,5 @@
 import React from "react";
+import "~/components/counter.scss";
 
 export interface CounterProps {
     initialCount?: number;
@@ -38,12 +39,22 @@ class Counter extends React.Component<CounterProps, CounterState> {
     render() {
         return (
             <div>
-                <h1>
+                <h1 className="header">
                     Current count: {this.state.currentCount} ({this.countType})
                 </h1>
 
-                <button onClick={() => this.increaseCounter()}>+</button>
-                <button onClick={() => this.decreaseCounter()}>-</button>
+                <button
+                    className="btn btn-primary"
+                    onClick={() => this.increaseCounter()}
+                >
+                    +
+                </button>
+                <button
+                    className="btn btn-primary"
+                    onClick={() => this.decreaseCounter()}
+                >
+                    -
+                </button>
             </div>
         );
     }

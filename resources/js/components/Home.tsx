@@ -2,6 +2,7 @@ import React, { ChangeEvent } from "react";
 import { Inertia } from "@inertiajs/inertia";
 import { InertiaLink } from "@inertiajs/inertia-react";
 import { CounterProps } from "./Counter";
+import "~/components/home.scss";
 
 interface HomeProps {}
 
@@ -47,29 +48,42 @@ class Home extends React.Component<HomeProps, HomeState> {
 
     render() {
         return (
-            <div>
-                <h1>Home component</h1>
+            <div className="col">
+                <div className="row">
+                    <h1 className="header">Home component</h1>
+                </div>
 
-                <input
-                    type="number"
-                    value={this.state.initialCount}
-                    onChange={this.handleInitialCounterChange}
-                />
+                <div className="row mb-10">
+                    <input
+                        className="form-control"
+                        type="number"
+                        value={this.state.initialCount}
+                        onChange={this.handleInitialCounterChange}
+                    />
+                </div>
 
-                <div>
-                    <InertiaLink
-                        href="/counter"
-                        method="get"
-                        as="button"
-                        type="button"
-                        data={this.counterData}
-                    >
-                        {this.buttonText}
-                    </InertiaLink>
+                <div className="row mt-10">
+                    <div className="col-6">
+                        <InertiaLink
+                            href="/counter"
+                            method="get"
+                            as="button"
+                            type="button"
+                            className="btn btn-primary"
+                            data={this.counterData}
+                        >
+                            {this.buttonText}
+                        </InertiaLink>
+                    </div>
 
-                    <button onClick={() => this.visitCounter()}>
-                        {this.buttonText} (Manually)
-                    </button>
+                    <div className="col-6">
+                        <button
+                            className="btn btn-secondary"
+                            onClick={() => this.visitCounter()}
+                        >
+                            {this.buttonText} (Manually)
+                        </button>
+                    </div>
                 </div>
             </div>
         );
