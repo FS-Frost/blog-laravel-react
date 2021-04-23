@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from "react";
 import { Inertia } from "@inertiajs/inertia";
 import { InertiaLink } from "@inertiajs/inertia-react";
-import { CounterProps } from "./Counter";
+import { CounterProps } from "@/components/Counter";
 import "~/components/home.scss";
 
 interface HomeProps {}
