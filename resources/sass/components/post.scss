@@ -1,0 +1,13 @@
+.post {
+    border-radius: 20px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    padding: 1rem;
+
+    &-user {
+        color: rgb(49, 49, 49);
+        font-style: italic;
+        font-size: small;
+    }
+}

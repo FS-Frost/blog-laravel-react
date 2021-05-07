@@ -12,4 +12,5 @@ mix.webpackConfig({
     .ts("resources/ts/app.tsx", "public/js/bundles")
     // .postCss("resources/css/app.css", "public/css/bundles", [])
     .sass("resources/sass/app.scss", "public/css/bundles")
-    .sourceMaps(false);
+    .sourceMaps(false)
+    .version();

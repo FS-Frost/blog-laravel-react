@@ -1,5 +1,5 @@
 import React from "react";
-import "~/components/counter.scss";
+import "~/components/counter.scoped.scss";
 
 export interface CounterProps {
     initialCount?: number;

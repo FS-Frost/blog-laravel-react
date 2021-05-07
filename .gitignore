@@ -3,6 +3,7 @@
 /public/js/bundles
 /public/css/bundles
 /public/storage
+/public/mix-manifest.json
 /storage/*.key
 /vendor
 .env
@@ -13,3 +14,4 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+TODO
